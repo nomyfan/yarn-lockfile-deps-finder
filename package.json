@@ -1,0 +1,11 @@
+{
+  "name": "yarn-lockfile-deps-finder",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/nomyfan/yarn-lockfile-deps-finder",
+  "author": "nomyfan <Nomyfan@live.com>",
+  "private": false,
+  "dependencies": {
+    "@yarnpkg/lockfile": "^1.1.0"
+  }
+}
