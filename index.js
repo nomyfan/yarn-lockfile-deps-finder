@@ -17,7 +17,7 @@ function parseLockfileToJson(filepath) {
 
 function main() {
   const { object } = parseLockfileToJson(path.resolve(config.yarnlock));
-  const exclude = config.exclude;
+  const exclude = config.exclude || [];
 
   /**
    * @type {{[index: string]: string[]}}
@@ -60,5 +60,9 @@ function main() {
       });
   }
 
-  fs.writeFileSync(config.output, JSON.stringify(deps, null, 2), "utf-8");
+  fs.writeFileSync(
+    config.output || path.resolve(__dirname, "output.json"),
+    JSON.stringify(deps, null, 2),
+    "utf-8",
+  );
 }
